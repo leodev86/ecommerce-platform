@@ -2,6 +2,7 @@ import ProductCard from "./ProductCard";
 
 const products = [
   {
+    id: 1,
     name: "Auriculares Pro",
     description:
       "Auriculares inalámbricos con cancelación de ruido.",
@@ -13,6 +14,7 @@ const products = [
       "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
   },
   {
+    id: 2,
     name: "Smart Watch",
     description:
       "Reloj inteligente para deporte y uso diario.",
@@ -23,6 +25,7 @@ const products = [
       "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
   },
   {
+    id: 3,
     name: "Cámara Compacta",
     description:
       "Captura tus mejores momentos con gran calidad.",
@@ -33,6 +36,7 @@ const products = [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
   },
   {
+    id: 4,
     name: "Zapatillas Urban",
     description:
       "Diseño moderno y comodidad para todos los días.",
@@ -48,7 +52,7 @@ export default function ProductGrid() {
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {products.map((product) => (
-        <ProductCard key={product.name} {...product} />
+        <ProductCard key={product.id} {...product} />
       ))}
     </div>
   );

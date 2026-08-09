@@ -31,11 +31,11 @@ export default function Home() {
 
       <div className="mt-8 flex flex-col gap-4 sm:flex-row">
         <Link
-  to="/products"
-  className="rounded-xl bg-blue-600 px-7 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-500"
->
-  Explorar productos →
-</Link>
+          to="/products"
+          className="rounded-xl bg-blue-600 px-7 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-500"
+        >
+          Explorar productos →
+        </Link>
 
         <button
           type="button"
@@ -241,12 +241,12 @@ export default function Home() {
         subtitle="Los favoritos de nuestra comunidad."
       />
 
-      <Link
-  to="/products"
-  className="mb-6 font-semibold text-blue-600 transition hover:text-blue-700"
->
-  Ver todos →
-</Link>
+        <Link
+          to="/products"
+          className="mb-6 font-semibold text-blue-600 transition hover:text-blue-700"
+        >
+        Ver todos →
+        </Link>
     </div>
 
     <ProductGrid />

@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 interface ProductCardProps {
+  id: number;
   name: string;
   description: string;
   price: number;
@@ -9,6 +12,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({
+  id,
   name,
   description,
   price,
@@ -80,9 +84,12 @@ export default function ProductCard({
           </span>
         </div>
 
-        <h3 className="mt-3 text-lg font-bold text-gray-900">
+        <Link
+          to={`/products/${id}`}
+          className="mt-3 block text-lg font-bold text-gray-900 transition hover:text-blue-600"
+        >
           {name}
-        </h3>
+        </Link>
 
         <p className="mt-2 line-clamp-2 text-sm leading-6 text-gray-500">
           {description}
