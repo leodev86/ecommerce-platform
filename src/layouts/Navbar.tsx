@@ -70,17 +70,17 @@ export default function Navbar() {
           </button>
 
           {/* Carrito */}
-          <button
-            type="button"
+          <Link
+            to="/cart"
             aria-label="Carrito"
-            className="relative flex h-11 w-11 items-center justify-center rounded-xl text-xl text-gray-600 transition hover:bg-gray-100 hover:text-blue-600"
+            className="relative flex h-11 w-11 items-center            justify-center rounded-xl text-xl text-gray-600            transition hover:bg-gray-100 hover:text-blue-600"
           >
             🛒
-
-            <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-600 px-1 text-[10px] font-bold text-white">
+            
+            <span className="absolute -right-0.5 -top-0.5 flex h-5           min-w-5 items-center justify-center rounded-full           bg-red-600 px-1 text-[10px] font-bold text-white">
               {totalItems}
             </span>
-          </button>
+          </Link>
 
           {/* Usuario */}
           <button
