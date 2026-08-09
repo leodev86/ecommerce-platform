@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "@/context/useCart";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const {totalItems} = useCart();
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 shadow-sm backdrop-blur">
@@ -76,7 +78,7 @@ export default function Navbar() {
             🛒
 
             <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-red-600 px-1 text-[10px] font-bold text-white">
-              3
+              {totalItems}
             </span>
           </button>
 
