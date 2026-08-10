@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { products } from "@/data/products";
 import { useCart } from "@/context/useCart";
 
@@ -7,6 +7,8 @@ export default function ProductDetail() {
   const { id } = useParams();
 
   const { addToCart } = useCart();
+
+  const navigate = useNavigate();
 
   const [quantity, setQuantity] = useState(1);
 
@@ -43,6 +45,7 @@ export default function ProductDetail() {
 
   const handleAddToCart = () => {
     addToCart(product, quantity);
+    navigate("/cart");
   };
 
   return (

@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useCart } from "@/context/useCart";
 
 interface ProductCardProps {
   id: number;
@@ -21,9 +22,29 @@ export default function ProductCard({
   discount,
   isNew,
 }: ProductCardProps) {
+  const navigate = useNavigate();
+  const { addToCart} = useCart();
   const originalPrice = discount
     ? price / (1 - discount / 100)
     : null;
+
+    const handleAddToCart = () => {
+      addToCart(
+        {
+          id,
+          name,
+          description,
+          price,
+          rating,
+          image,
+          discount,
+          isNew,
+        },
+        1,
+      );
+
+      navigate("/cart");
+    }
 
   return (
     <article className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -111,6 +132,7 @@ export default function ProductCard({
         {/* Comprar */}
         <button
           type="button"
+          onClick={handleAddToCart}
           className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-gray-900 px-4 py-3 font-bold text-white transition duration-300 hover:bg-blue-600"
         >
           🛒 Agregar al carrito

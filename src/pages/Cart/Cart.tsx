@@ -206,14 +206,14 @@ console.log("TOTAL:", totalPrice);
             </span>
           </div>
 
-          <button
-            type="button"
-            className="mt-6 w-full rounded-xl bg-blue-600 px-6 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-700"
-          >
+        <Link
+            to="/checkout"
+            className="mt-6 flex w-full items-center justify-center           rounded-xl bg-blue-600 px-6 py-4 font-bold text-white           transition hover:bg-blue-700"
+            >
             Continuar compra →
-          </button>
+            </Link>
 
-          <Link
+        <Link
             to="/products"
             className="mt-3 block text-center text-sm font-semibold text-gray-600 transition hover:text-blue-600"
           >
